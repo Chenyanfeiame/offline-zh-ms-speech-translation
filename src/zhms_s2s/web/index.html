@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#fafafa" />
+    <title>Local Voice · 中马离线声译</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Local Voice 首页">
+          <span class="brand-ring" aria-hidden="true">
+            <span class="brand-mark"><i></i><i></i><i></i><i></i></span>
+          </span>
+          <span class="brand-copy"><strong>Local Voice</strong><small>中马离线声译</small></span>
+        </a>
+        <div class="system-actions">
+          <div class="status" id="system-status"><span></span>正在检查模型</div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <p class="local-badge"><span></span>100% 在这台 Mac 上完成</p>
+        <h1>按一下，开始说话。</h1>
+        <p>自动识别中文或马来语，翻译后直接读给你听。</p>
+      </section>
+
+      <section class="workspace" aria-label="语音翻译工作区">
+        <div class="warmup-panel" id="warmup-panel">
+          <div class="warmup-copy">
+            <span>演示前</span>
+            <strong>先预热一次本地模型</strong>
+            <p id="warmup-note">首次约 20 秒，完成后录音翻译会快很多。</p>
+          </div>
+          <button id="warmup-button" type="button">
+            <span class="warmup-symbol" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span><b id="warmup-button-label">开始预热</b><small>约 20 秒</small></span>
+          </button>
+        </div>
+
+        <div class="direction-bar">
+          <label class="language-control">
+            <span>我说的是</span>
+            <select id="source-language" aria-label="来源语言模式">
+              <option value="auto">自动识别</option>
+              <option value="zh">中文</option>
+              <option value="ms">Bahasa Melayu</option>
+            </select>
+            <small id="source-mode">自动语言识别</small>
+          </label>
+
+          <button class="swap" id="swap-language" type="button" aria-label="切换或手动指定翻译方向">
+            <span aria-hidden="true">⇄</span><small>手动</small>
+          </button>
+
+          <div class="language-control target-control">
+            <span>翻译成</span>
+            <strong id="target-language">自动反向</strong>
+            <small id="target-code">中文 ↔ 马来语</small>
+          </div>
+        </div>
+
+        <details class="settings">
+          <summary>声音与本次专有词</summary>
+          <div class="run-options">
+            <label>
+              <span>输出声音</span>
+              <select id="voice-select" aria-label="输出音色">
+                <option value="">自动匹配目标语言</option>
+              </select>
+            </label>
+            <label>
+              <span>本次专有词（可选）</span>
+              <input id="entity-context" type="text" maxlength="260" placeholder="例如 KL Sentral, 槟城, 马航 MH123" />
+            </label>
+            <p>仅将少量本次已知名称用于中文或马来语识别，不会加载全局场景词表。</p>
+          </div>
+        </details>
+
+        <div class="capture">
+          <div class="capture-main">
+            <div class="capture-heading">
+              <span class="capture-kicker">麦克风录音</span>
+              <span class="privacy-note"><i></i>声音不会上传云端</span>
+            </div>
+            <canvas id="waveform" width="720" height="120" aria-hidden="true"></canvas>
+            <div class="record-state">
+              <strong id="record-time">00:00</strong>
+              <span id="record-label">准备好了就开始</span>
+            </div>
+            <button class="record-button" id="record-button" type="button" aria-label="开始录音">
+              <span class="record-dot" aria-hidden="true"></span>
+              <b id="record-button-text">开始录音</b>
+            </button>
+            <p class="hint">点击一次开始，再点击一次停止</p>
+          </div>
+
+          <div class="or"><span>或者</span></div>
+
+          <label class="dropzone" id="dropzone">
+            <input id="file-input" type="file" accept=".wav,.flac,.ogg,.aiff,.aif,.m4a,.aac,.mp3,audio/wav,audio/flac,audio/ogg,audio/mp4,audio/aac,audio/mpeg" />
+            <span class="upload-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4" /></svg>
+            </span>
+            <span class="upload-copy"><strong>上传一段录音</strong><small>WAV、M4A、AAC、MP3、FLAC、OGG 或 AIFF · 最大 25 MB</small></span>
+            <span class="choose-file">选择文件</span>
+            <span class="file-name" id="file-name"></span>
+          </label>
+        </div>
+
+        <button class="translate-button" id="translate-button" type="button" disabled>
+          <span>开始离线翻译</span><b>音频准备后即可点击</b>
+        </button>
+      </section>
+
+      <section class="results hidden" id="results" aria-live="polite">
+        <div class="result-heading">
+          <div><p id="result-state">翻译完成</p><h2 id="result-title">刚刚说了什么？</h2></div>
+          <span id="request-id"></span>
+        </div>
+        <div class="result-grid">
+          <article class="asr-edit-card">
+            <span class="step">ASR 识别结果（可修改）</span>
+            <h3 id="asr-language">自动语言识别</h3>
+            <textarea id="asr-text" rows="6" aria-label="可修改的 ASR 识别文本"></textarea>
+            <div class="context-audit hidden" id="entity-rescue-summary">
+              <strong>通用实体增强</strong>
+              <p></p><small></small>
+            </div>
+            <small class="edit-hint" id="edit-hint">如果识别不准，可以直接修改文本后重新生成译文和语音。</small>
+            <button class="regenerate-button" id="regenerate-button" type="button" disabled>
+              按修改后的文本重新生成
+            </button>
+          </article>
+          <article class="translation-card" id="translation-card">
+            <span class="step">Final Translation</span>
+            <h3 id="mt-language">直接翻译</h3>
+            <p id="translated-text"></p>
+          </article>
+          <article class="audio-card" id="audio-card">
+            <span class="step">合成语音</span>
+            <h3>点击播放译文</h3>
+            <audio id="output-audio" controls></audio>
+          </article>
+        </div>
+        <div class="timings" id="timings"></div>
+      </section>
+
+      <section class="error hidden" id="error" role="alert">
+        <strong>暂时没有处理成功</strong><p id="error-message"></p>
+      </section>
+
+      <footer>
+        <span>Offline ASR</span><i></i><span>HY-MT</span><i></i><span>Open-source TTS</span><b>Local only</b>
+      </footer>
+    </main>
+    <script src="app.js?v=selective-entity-rescue-1"></script>
+  </body>
+</html>

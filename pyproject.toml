@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zhms-offline-s2s"
+version = "0.1.0"
+description = "Offline Chinese/Malay ASR, machine translation and TTS demo"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = "MIT"
+dependencies = [
+  "fastapi>=0.110,<1",
+  "uvicorn[standard]>=0.29,<1",
+  "python-multipart>=0.0.9,<1",
+  "pydantic>=2.6,<3",
+  "numpy>=1.24,<3",
+  "scipy>=1.10,<2",
+  "soundfile>=0.12,<1",
+  "av>=16,<17",
+  "coremltools>=9,<10; platform_system == 'Darwin'",
+]
+
+[project.optional-dependencies]
+models = [
+  "torch>=2.2,<3",
+  "transformers>=4.46,<5",
+  "sentencepiece==0.2.0",
+  "huggingface-hub>=0.26,<1",
+  "mlx-qwen3-asr==0.4.4; platform_machine == 'arm64' and sys_platform == 'darwin'",
+  "opencc==1.4.2",
+  "piper-tts[zh]>=1.8,<2",
+]
+test = [
+  "httpx>=0.27,<1",
+  "pytest>=8,<9",
+  "pytest-cov>=5,<7",
+]
+
+[project.scripts]
+zhms = "zhms_s2s.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+zhms_s2s = ["web/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

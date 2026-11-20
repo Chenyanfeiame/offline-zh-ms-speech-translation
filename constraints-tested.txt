@@ -1,0 +1,25 @@
+# Direct dependencies tested on native Apple Silicon on 2026-11-19.
+fastapi==0.165.0
+uvicorn==0.54.0
+python-multipart==0.0.34
+pydantic==2.14.3
+numpy==2.5.5
+scipy==1.18.1
+soundfile==0.14.0
+av==16.0.1
+coremltools==9.0
+torch==2.15.0
+transformers==4.57.6
+sentencepiece==0.2.0
+huggingface-hub==0.36.2
+mlx-qwen3-asr==0.4.4
+mlx==0.32.4
+mlx-metal==0.32.4
+opencc==1.4.2
+piper-tts==1.8.0
+g2pW==0.1.2
+sentence-stream==1.4.0
+unicode-rbnf==2.5.0
+httpx==0.28.1
+pytest==8.4.2
+pytest-cov==6.3.0

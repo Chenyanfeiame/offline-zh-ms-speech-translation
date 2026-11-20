@@ -1,0 +1,618 @@
+{
+  "version": 1,
+  "description": "Scene-independent offline entity lexicon for Malay-Chinese speech translation.",
+  "entity_types": {
+    "location": [
+      {
+        "canonical_name": "KL Sentral",
+        "aliases": ["Kuala Lumpur Sentral", "KL Central"],
+        "language": "multi",
+        "entity_type": "location",
+        "pronunciation_variants": ["K L Sentral", "K L Central"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Pulau Pinang",
+        "aliases": ["Penang"],
+        "language": "multi",
+        "entity_type": "location",
+        "pronunciation_variants": ["Pulau Pineng"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Beijing",
+        "aliases": ["Peking"],
+        "language": "multi",
+        "entity_type": "location",
+        "pronunciation_variants": ["Bei Jing"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Kuala Lumpur",
+        "aliases": ["KL"],
+        "language": "multi",
+        "entity_type": "location",
+        "pronunciation_variants": ["Kuala Lumpor"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Lapangan Terbang Antarabangsa Kuala Lumpur",
+        "aliases": ["KLIA", "Kuala Lumpur International Airport"],
+        "language": "ms",
+        "entity_type": "location",
+        "pronunciation_variants": ["K L I A"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Johor Bahru",
+        "aliases": ["JB"],
+        "language": "multi",
+        "entity_type": "location",
+        "pronunciation_variants": ["Johor Baru"],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Kota Kinabalu",
+        "aliases": ["KK"],
+        "language": "multi",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Putrajaya",
+        "aliases": [],
+        "language": "multi",
+        "entity_type": "location",
+        "pronunciation_variants": ["Putra Jaya"],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Shanghai",
+        "aliases": [],
+        "language": "multi",
+        "entity_type": "location",
+        "pronunciation_variants": ["Shang Hai"],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Guangzhou",
+        "aliases": ["Canton"],
+        "language": "multi",
+        "entity_type": "location",
+        "pronunciation_variants": ["Guang Zhou"],
+        "priority": 4
+      },
+      {
+        "canonical_name": "吉隆坡中央车站",
+        "aliases": ["吉隆坡中央火车站"],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "槟城",
+        "aliases": ["槟榔屿"],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "北京",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "吉隆坡",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "吉隆坡国际机场",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "新山",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "亚庇",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "布城",
+        "aliases": ["普特拉贾亚"],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "上海",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "广州",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "location",
+        "pronunciation_variants": [],
+        "priority": 4
+      }
+    ],
+    "food": [
+      {
+        "canonical_name": "Nasi Lemak",
+        "aliases": [],
+        "language": "ms+zh",
+        "entity_type": "food",
+        "pronunciation_variants": ["nasi lemak"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Roti Canai",
+        "aliases": ["Roti Chennai"],
+        "language": "ms+zh",
+        "entity_type": "food",
+        "pronunciation_variants": ["roti chanai"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Laksa",
+        "aliases": ["Asam Laksa"],
+        "language": "ms+zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Char Kuey Teow",
+        "aliases": ["Char Kway Teow", "Char Koay Teow"],
+        "language": "ms+zh",
+        "entity_type": "food",
+        "pronunciation_variants": ["char kue teow"],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Teh Tarik",
+        "aliases": [],
+        "language": "ms+zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Nasi Kandar",
+        "aliases": [],
+        "language": "ms+zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Bak Kut Teh",
+        "aliases": ["Bah Kut Teh"],
+        "language": "ms+zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Cendol",
+        "aliases": ["Chendol"],
+        "language": "ms+zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 3
+      },
+      {
+        "canonical_name": "椰浆饭",
+        "aliases": ["纳西勒马"],
+        "language": "zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "印度煎饼",
+        "aliases": ["罗蒂煎饼"],
+        "language": "zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "叻沙",
+        "aliases": ["喇沙"],
+        "language": "zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "炒粿条",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "拉茶",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "肉骨茶",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "food",
+        "pronunciation_variants": [],
+        "priority": 4
+      }
+    ],
+    "person_organization_brand": [
+      {
+        "canonical_name": "Malaysia Airlines",
+        "aliases": ["MAS"],
+        "language": "multi",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": ["Malaysian Airlines"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "AirAsia",
+        "aliases": ["Air Asia"],
+        "language": "multi",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Rapid KL",
+        "aliases": [],
+        "language": "multi",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": ["Rapid K L"],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Keretapi Tanah Melayu",
+        "aliases": ["KTM"],
+        "language": "ms+zh",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": ["K T M"],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Touch 'n Go",
+        "aliases": ["Touch and Go", "TNG"],
+        "language": "multi",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": ["Touch n Go"],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Petronas",
+        "aliases": ["PETRONAS"],
+        "language": "multi",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Apple",
+        "aliases": ["Apple Inc"],
+        "language": "multi",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": [],
+        "priority": 3
+      },
+      {
+        "canonical_name": "Huawei",
+        "aliases": [],
+        "language": "multi",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": ["Hua Wei"],
+        "priority": 3
+      },
+      {
+        "canonical_name": "马来西亚航空",
+        "aliases": ["马航"],
+        "language": "zh",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "亚洲航空",
+        "aliases": ["亚航"],
+        "language": "zh",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "马来西亚国家石油公司",
+        "aliases": ["马油", "Petronas"],
+        "language": "zh",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "华为",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "person_organization_brand",
+        "pronunciation_variants": [],
+        "priority": 3
+      }
+    ],
+    "transport_business": [
+      {
+        "canonical_name": "nombor penerbangan",
+        "aliases": ["flight number"],
+        "language": "ms",
+        "entity_type": "transport_business",
+        "pronunciation_variants": [],
+        "priority": 3
+      },
+      {
+        "canonical_name": "nombor pesanan",
+        "aliases": ["nomor pesanan", "order number"],
+        "language": "ms",
+        "entity_type": "transport_business",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "nombor tempahan",
+        "aliases": ["booking number", "reservation number"],
+        "language": "ms",
+        "entity_type": "transport_business",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "nombor tiket",
+        "aliases": ["ticket number"],
+        "language": "ms",
+        "entity_type": "transport_business",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "laluan MRT",
+        "aliases": ["MRT line"],
+        "language": "ms",
+        "entity_type": "transport_business",
+        "pronunciation_variants": ["laluan M R T"],
+        "priority": 3
+      },
+      {
+        "canonical_name": "航班号",
+        "aliases": ["航班编号"],
+        "language": "zh",
+        "entity_type": "transport_business",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "订单号",
+        "aliases": ["订单编号"],
+        "language": "zh",
+        "entity_type": "transport_business",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "预订编号",
+        "aliases": ["预订号"],
+        "language": "zh",
+        "entity_type": "transport_business",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "票号",
+        "aliases": ["票据编号"],
+        "language": "zh",
+        "entity_type": "transport_business",
+        "pronunciation_variants": [],
+        "priority": 4
+      }
+    ],
+    "date_time_numeric": [
+      {
+        "canonical_name": "Ringgit Malaysia",
+        "aliases": ["ringgit", "MYR", "RM"],
+        "language": "ms",
+        "entity_type": "date_time_numeric",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "November",
+        "aliases": [],
+        "language": "multi",
+        "entity_type": "date_time_numeric",
+        "pronunciation_variants": ["Nopember"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Disember",
+        "aliases": ["December"],
+        "language": "ms",
+        "entity_type": "date_time_numeric",
+        "pronunciation_variants": [],
+        "priority": 3
+      },
+      {
+        "canonical_name": "kilometer",
+        "aliases": ["km"],
+        "language": "ms",
+        "entity_type": "date_time_numeric",
+        "pronunciation_variants": [],
+        "priority": 3
+      },
+      {
+        "canonical_name": "kilogram",
+        "aliases": ["kg"],
+        "language": "ms",
+        "entity_type": "date_time_numeric",
+        "pronunciation_variants": [],
+        "priority": 3
+      },
+      {
+        "canonical_name": "马来西亚令吉",
+        "aliases": ["令吉", "马币"],
+        "language": "zh",
+        "entity_type": "date_time_numeric",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "十一月",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "date_time_numeric",
+        "pronunciation_variants": [],
+        "priority": 5
+      }
+    ],
+    "technical_term": [
+      {
+        "canonical_name": "pengecaman pertuturan",
+        "aliases": ["speech recognition", "ASR"],
+        "language": "ms",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "terjemahan mesin",
+        "aliases": ["machine translation", "MT"],
+        "language": "ms",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "sintesis pertuturan",
+        "aliases": ["speech synthesis", "text to speech", "TTS"],
+        "language": "ms",
+        "entity_type": "technical_term",
+        "pronunciation_variants": ["sintesis suara"],
+        "priority": 5
+      },
+      {
+        "canonical_name": "luar talian",
+        "aliases": ["offline"],
+        "language": "ms",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "Internet",
+        "aliases": ["internet"],
+        "language": "multi",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 4
+      },
+      {
+        "canonical_name": "Wi-Fi",
+        "aliases": ["WiFi", "wireless network"],
+        "language": "multi",
+        "entity_type": "technical_term",
+        "pronunciation_variants": ["wai fai"],
+        "priority": 3
+      },
+      {
+        "canonical_name": "Bluetooth",
+        "aliases": [],
+        "language": "multi",
+        "entity_type": "technical_term",
+        "pronunciation_variants": ["bluetooth"],
+        "priority": 3
+      },
+      {
+        "canonical_name": "perisian",
+        "aliases": ["software"],
+        "language": "ms",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 3
+      },
+      {
+        "canonical_name": "语音识别",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "机器翻译",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "语音合成",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "离线",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 5
+      },
+      {
+        "canonical_name": "互联网",
+        "aliases": [],
+        "language": "zh",
+        "entity_type": "technical_term",
+        "pronunciation_variants": [],
+        "priority": 4
+      }
+    ]
+  }
+}
