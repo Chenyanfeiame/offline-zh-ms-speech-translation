@@ -1,0 +1,36 @@
+.DS_Store
+.env
+.venv*/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local runtime state and large artifacts
+config.json
+config.local.json
+models/
+outputs/
+reports/
+backups/
+build/
+tmp/
+logs/
+g2pW/
+tools/
+
+# Evaluation and user recordings are intentionally not published
+data/fleurs/
+data/self_recorded/
+data/travel_hotwords/
+data/entity_challenge/
+*.wav
+*.aiff
+*.m4a
+*.aac
+*.mp3
+*.flac
+*.ogg
